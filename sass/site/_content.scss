@@ -1,0 +1,77 @@
+/*--------------------------------------------------------------
+# Content general
+--------------------------------------------------------------*/
+article {
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+
+	.entry-title {
+		margin-top: 2rem;
+	}
+
+	.entry-subtitle { // ACF
+		margin-top: -1.25em;
+		margin-bottom: 1.5em;
+		font-weight: bold;
+	}
+
+	.entry-header {
+		img {
+			display: block;
+			margin-bottom: $base-spacing;
+			width: 100%;
+		}
+	}
+
+	.entry-meta {
+		margin-top: -1.25em;
+		margin-bottom: 1.25em;
+		font-size: .875em;
+		color: $gray;
+		.updated:not(.published) {
+			display: none;
+		}
+	}
+
+	.entry-footer {
+		color: $medium-gray;
+		font-size: .875em;
+		.edit-links,
+		.cat-links,
+		.tags-links {
+			display: block;
+		}
+		.icon {
+			margin-right: .5em;
+		}
+	}
+
+	.page-links {
+		clear: both;
+		margin: 0 0 1.5em;
+	}
+
+	.comments-link {
+		float: right;
+	}
+}
+
+/*--------------------------------------------------------------
+# Content archives
+--------------------------------------------------------------*/
+.page-header {
+	.page-title {
+		font-size: 1em;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-top: 2rem;
+	}
+
+	.archive-description {
+		font-size: .9375em;	
+	}
+}
+
+article:not(.page) {
+	margin-bottom: $base-spacing * 2;
+}

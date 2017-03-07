@@ -1,0 +1,39 @@
+{
+  "name": "starter-project",
+  "authors": [
+    "Bas Middelham <bas@middelham.nl> (http://middelham.nl)"
+  ],
+  "description": "A Starter Theme for WordPress based on Bourbon, Neat & Bitters",
+  "main": [
+    "sass/style.scss",
+    "js/strt-scripts.js"
+  ],
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "keywords": [
+    "none"
+  ],
+  "license": "MIT",
+  "homepage": "http://strt.middelham.nl",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MoshCat/starter.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "webfontloader": "^1.6.27"
+  }
+}
