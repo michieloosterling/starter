@@ -9,12 +9,12 @@
 
 ?>
 
-<section class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'strt' ); ?></h1>
-	</header><!-- .page-header -->
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="entry-content">
+		<header class="entry-header">
+			<h1 class="entry-title"><?php esc_html_e( 'Nothing Found', 'strt' ); ?></h1>
+		</header><!-- .entry-header -->
 
-	<div class="page-content">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
@@ -33,5 +33,8 @@
 				get_search_form();
 
 		endif; ?>
-	</div><!-- .page-content -->
-</section><!-- .no-results -->
+
+
+	</div><!-- .entry-content -->
+
+</article><!-- #post-## -->

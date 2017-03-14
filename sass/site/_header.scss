@@ -2,15 +2,17 @@
 # Header
 --------------------------------------------------------------*/
 #masthead {
-	position: relative;
-	@include media($medium) {
-		align-items: center;
-		display: flex;
-		justify-content: space-between;
 
-		.site-branding {
-			flex: 1;
+	.site-branding {
+
+	}
+
+	#site-navigation {
+
+		#primary-menu {
+
 		}
+
 	}
 
 	.site-branding {
@@ -19,12 +21,13 @@
 			padding: 1em 0;
 		}
 
-		h1, span {
+		span {
 			@extend .screen-reader-text;
 		}
 	}
+	
 
-	button {
+	.menu-toggle {
 		position: absolute;
 		right: 10px;
 		top: 10px;
@@ -41,7 +44,7 @@
 	display: block;
 }
 
-@include media($medium) {
+@include grid-media($medium) {
 	.menu-toggle {
 		display: none;
 	}

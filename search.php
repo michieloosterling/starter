@@ -40,9 +40,8 @@ get_header(); ?>
 
 		endif; ?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+		</main>
+		<?php get_sidebar(); ?>
+	</section>
 
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer();

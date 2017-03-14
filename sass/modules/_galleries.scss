@@ -7,7 +7,7 @@
 		display: block;
 	}
 	.gallery-item {
-		margin: $small-spacing 0;
+		margin: 1.5em 0;
 		position: relative;
 	}
 	.wp-caption-text {
@@ -17,59 +17,50 @@
 		width: 100%;
 		background: rgba(255,255,255,.67);
 	}
-	@include media($medium) {
+	@include grid-media($medium) {
 		&.gallery-columns-1 {
 			.gallery-item {
-				@include span-columns(12 of 12);
-				@include omega(1n);
+				@include grid-column(12 of 12);
 			}
 		}
 		&.gallery-columns-2 {
 			.gallery-item {
-				@include span-columns(6 of 12);
-				@include omega(2n);
+				@include grid-column(6 of 12);
 			}
 		}
 		&.gallery-columns-3 {
 			.gallery-item {
-				@include span-columns(4 of 12);
-				@include omega(3n);
+				@include grid-column(4 of 12);
 			}
 		}
 		&.gallery-columns-4 {
 			.gallery-item {
-				@include span-columns(3 of 12);
-				@include omega(4n);
+				@include grid-column(3 of 12);
 			}
 		}
 		&.gallery-columns-5 {
 			.gallery-item {
-				@include span-columns(2.4 of 12);
-				@include omega(5n);
+				@include grid-column(2.4 of 12);
 			}
 		}
 		&.gallery-columns-6 {
 			.gallery-item {
-				@include span-columns(2 of 12);
-				@include omega(6n);
+				@include grid-column(2 of 12);
 			}
 		}
 		&.gallery-columns-7 {
 			.gallery-item {
-				@include span-columns(1.714 of 12);
-				@include omega(7n);
+				@include grid-column(1.714 of 12);
 			}
 		}
 		&.gallery-columns-8 {
 			.gallery-item {
-				@include span-columns(1.5 of 12);
-				@include omega(8n);
+				@include grid-column(1.5 of 12);
 			}
 		}
 		&.gallery-columns-9 {
 			.gallery-item {
-				@include span-columns(1.333 of 12);
-				@include omega(9n);
+				@include grid-column(1.333 of 12);
 			}
 		}
 	}

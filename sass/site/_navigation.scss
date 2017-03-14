@@ -3,6 +3,7 @@
 --------------------------------------------------------------*/
 #site-navigation {
 	font-size: .875em;
+	@include clearfix();
 
 	ul {
 		display: none;
@@ -16,7 +17,7 @@
 		
 		a {
 			display: block;
-			font-weight: bold;
+			font-weight: 600;
 			text-decoration: none;
 			color: $base-font-color;
 			padding: .5em 0;
@@ -45,7 +46,7 @@
 		color: $action-color;
 	}
 
-	@include media($medium) {
+	@include grid-media($large) {
 		ul {
 			ul {
 				background: $white;
@@ -105,12 +106,12 @@
 			a {
 				padding: 1.5em 1em;
 				text-transform: uppercase;
-				font-weight: bold;
+
 				.icon {
 					display: inline;
-					left: 5px;
-					position: relative;
-					margin-top: -.125em;
+					right: 0;
+					position: absolute;
+					margin-top: .25em;
 				}
 			}
 		}

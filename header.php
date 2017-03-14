@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="alternate" hreflang="<?php bloginfo( 'language' ); ?>" href="<?php echo esc_url( home_url() ); ?>" />
+<link rel="preconnect" href="http://fonts.googleapis.com/" crossorigin>
 <script>
-	// Immediately add wf-loading class 
 	document.documentElement.className += ' wf-loading';
-	// WebFontConfig settings
 	WebFontConfig = { 
 		google: {
 			families: [
-				'Open Sans:400,400i,600,600i',
+				'Open Sans:400,400i,600',
 				'Oswald:400'
 			]
 		},
+		timeout: 2000,
 	};
 </script>
 <?php wp_head(); ?>
@@ -27,22 +27,14 @@
 	<header id="masthead" itemscope itemtype="http://schema.org/Organization">
 		<div class="site-branding">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url">
-				<?php if ( is_front_page() && is_home() ) : ?>
-					<h1 itemprop="name"><?php bloginfo( 'name' ); ?></h1>
-				<?php else : ?>
-					<span itemprop="name"><?php bloginfo( 'name' ); ?></span>
-				<?php endif; ?>
-				<?php 
-				$description = get_bloginfo( 'description', 'display' );
-				if ( $description || is_customize_preview() ) : ?>
-					<span itemprop="description"><?php echo $description; ?></span>
-				<?php endif; ?>
+				<span itemprop="name"><?php bloginfo( 'name' ); ?></span>
+				<span itemprop="description"><?php echo get_bloginfo( 'description' ); ?></span>
 				<img width="190" height="48" class="site-logo" itemprop="logo" src="<?php echo get_template_directory_uri() ?>/img/starter-logo.png" alt="Logo <?php bloginfo( 'name' ); ?>" srcset="<?php echo get_template_directory_uri() ?>/img/starter-logo@2x.png 2x">
 			</a>
-		</div><!-- .site-branding -->
+		</div>
 		<nav id="site-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span><?php esc_html_e( 'Menu', 'strt' ); ?></span></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+		</nav>
+	</header>
 	<div id="content">

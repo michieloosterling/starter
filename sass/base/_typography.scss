@@ -2,27 +2,40 @@
 # Typography
 --------------------------------------------------------------*/
 .wf-loading {
-	h1, h2, h3, h4, h5, h6, p, span, li, td, button, input {
+	h1, h2, h3, h4, h5, h6, p, span, li, td, .button, input {
 		opacity: 0;
 	}
 }
-.wf-inactive {
-	h1, h2, h3, h4, h5, h6 p, span, li, td, button, input {
-		opacity: 1;
-	}
-}
-.wf-oswald-n4-active  {
+
+.wf-oswald-n4-active,
+.wf-active {
 	h1, h2, h3, h4, h5, h6 {
 		font-family: 'Oswald', $base-font-family;
 		opacity: 1;
 		transition: opacity $base-duration;
 	}
 }
-.wf-opensans-n4-active {
-	p, span, li, td, button, input {
-		font-family: 'Open Sans', $base-font-family;
+.wf-opensans-n4-active,
+.wf-active {
+	p, span, li, td, .button, input {
 		opacity: 1;
 		transition: opacity $base-duration;
+	}
+	body {
+		font-family: 'Open Sans', $base-font-family;
+	}
+}
+
+.wf-active,
+.wf-inactive {
+	h1, h2, h3, h4, h5, h6, p, span, li, td, .button, input {
+		opacity: 1;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Oswald', $base-font-family;
+	}
+	body {
+		font-family: 'Open Sans', $base-font-family;
 	}
 }
 
@@ -108,8 +121,9 @@ a {
 }
 
 label {
-	font-weight: bold;
+	font-weight: 600;
 }
+
 hr {
 	border-bottom: $base-border;
 	border-left: 0;
@@ -127,12 +141,12 @@ blockquote {
 	p {
 		margin-bottom: .5em;
 	}
-	@include media( $medium ) {
+	@include grid-media($medium) {
 		padding-left: 4.5em;
 	}
 }
 
-@include media($medium) {
+@include grid-media($medium) {
 	blockquote:before {
 		color: $action-color;
 		content: open-quote;

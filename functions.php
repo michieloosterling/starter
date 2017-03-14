@@ -33,7 +33,7 @@ add_action( 'after_setup_theme', 'strt_setup' );
 # Content width
 --------------------------------------------------------------*/
 function strt_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'strt_content_width', 760 );
+	$GLOBALS['content_width'] = apply_filters( 'strt_content_width', 840 );
 }
 add_action( 'after_setup_theme', 'strt_content_width', 0 );
 

@@ -43,9 +43,8 @@ get_header(); ?>
 
 		endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</main>
+		<?php get_sidebar(); ?>
+	</div>
 
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer();

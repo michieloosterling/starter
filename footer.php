@@ -1,21 +1,17 @@
-	</div><!-- #content -->
+	</div><?php
+
+	if( ! class_exists( 'acf' ) || ! get_field('hide_footer') ) { 
+	if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) { ?> 
 
 	<footer id="colophon">
-
-		<?php
-		if( ! class_exists( 'acf' ) || ! get_field('hide_footer') ) { 
-			if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) {
-		?>
-
 		<aside class="widget-area">
-			<div><?php dynamic_sidebar( 'footer-1' ); ?></div>
-			<div><?php dynamic_sidebar( 'footer-2' ); ?></div>
-			<div><?php dynamic_sidebar( 'footer-3' ); ?></div>
+			<?php dynamic_sidebar( 'footer-1' ); ?>
+			<?php dynamic_sidebar( 'footer-2' ); ?>
+			<?php dynamic_sidebar( 'footer-3' ); ?>
 		</aside>
-	
-	<?php } } ?>
+	</footer><?php
 
-	</footer><!-- #colophon -->
+	} } ?> 
 
 	<div id="socket">
 		<span>
@@ -23,9 +19,9 @@
 			<span class="sep"> | </span>
 			<?php echo get_bloginfo( 'description' ) ?> - <?php printf( esc_html__( 'Website by %1$s.', 'strt' ), '<a href="https://middelham.nl/" rel="designer">Bas Middelham</a>' ); ?>
 		</span>
-	</div><!-- .site-info -->
+	</div>
 
-</div><!-- #page -->
+</div>
 
 <?php wp_footer(); ?>
 

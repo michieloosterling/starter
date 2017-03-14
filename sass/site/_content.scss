@@ -5,31 +5,32 @@ article {
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 
-	.entry-title {
-		margin-top: 2rem;
-	}
-
-	.entry-subtitle { // ACF
-		margin-top: -1.25em;
-		margin-bottom: 1.5em;
-		font-weight: bold;
-	}
-
 	.entry-header {
+
+		.entry-title {
+			margin-top: 1rem;
+		}
+	
+		.entry-subtitle {
+			margin-top: -1.25em;
+			margin-bottom: 1.5em;
+			font-weight: 600;
+		}
+	
+		.entry-meta {
+			margin-top: -1.25em;
+			margin-bottom: 1.25em;
+			font-size: .875em;
+			color: $gray;
+			.updated:not(.published) {
+				display: none;
+			}
+		}
+
 		img {
 			display: block;
 			margin-bottom: $base-spacing;
 			width: 100%;
-		}
-	}
-
-	.entry-meta {
-		margin-top: -1.25em;
-		margin-bottom: 1.25em;
-		font-size: .875em;
-		color: $gray;
-		.updated:not(.published) {
-			display: none;
 		}
 	}
 
@@ -62,7 +63,6 @@ article {
 .page-header {
 	.page-title {
 		font-size: 1em;
-		font-weight: bold;
 		text-transform: uppercase;
 		margin-top: 2rem;
 	}

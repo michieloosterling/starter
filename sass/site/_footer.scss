@@ -3,14 +3,24 @@
 --------------------------------------------------------------*/
 #colophon {
 	background-color: $ultralight-gray;
+	padding-top: 1.5em;
 
 	.widget-area {
-		@include clearfix();
-		> div {
-			@include span-columns(12);
-			@include omega();
-			@include media($medium) {
-				@include span-columns(4);
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		@extend .wrap;
+		@include grid-media($large) {
+			flex-direction: row;
+		}
+
+		.widget {
+	    	width: 100%;
+			@include grid-media($large) {
+		    	padding-right: 40px;
+		    	&:last-child {
+			    	padding-right: 0;
+		    	}
 			}
 		}
 	}
@@ -19,8 +29,5 @@
 #socket {
 	background-color: $light-gray;
 	text-align: center;
-	padding: $small-spacing;
-	@include media($medium) {
-		padding: $base-spacing;
-	}
+	padding: 1.5em;
 }

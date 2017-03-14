@@ -2,7 +2,7 @@
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 3em 0 4em;
+	margin: 0 0 2em;
 	font-size: .9375em;
 
 	.widgettitle {
@@ -49,7 +49,7 @@
 		margin: 0;
 	}
 	caption {
-		font-weight: bold;
+		font-weight: 600;
 		margin-bottom: .5em;
 	}
 	td, th {
@@ -87,7 +87,7 @@
 	.rss-date, cite {
 		display: block;
 		font-size: .875em;
-		font-weight: bold;
+		font-weight: 600;
 	}
 }
 

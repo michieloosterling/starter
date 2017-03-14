@@ -10,40 +10,112 @@ body {
 	background: $base-background-color;
 }
 
-#masthead,
-#content,
-#colophon .widget-area {
-	padding-left: 20px;
-	padding-right: 20px;
-	@include media($large) {
-		padding-left: 40px;
-		padding-right: 40px;
-	}
-
-	@include media($medium) {
-		@include outer-container();
-	}
-
+.wrap {
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 100%;
 }
 
+.entry-content,
+#masthead {
+	@extend .wrap;
+}
 
 /*--------------------------------------------------------------
-# Templates
+# Sidebar
 --------------------------------------------------------------*/
-@include media($medium) {
- 	
- 	// Sidebar
-	#primary.content-area:not(.wide) {
-		@include span-columns(8);
+.content-area:not(.nosidebar) {
+	@extend .wrap;
+
+	@include grid-media($large) {
+		display: flex;
+
+		.site-main {
+			width: 70%;
+			margin-right: 5%;
+		}
+
+		.widget-area {
+			width: 25%;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Columns
+--------------------------------------------------------------*/
+.row {
+
+	.cols {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		&:not([data-stretch-type="full-stretched"]) {
+			@extend .wrap;
+		}
+
+		@include grid-media($large) {
+			flex-direction: row;
+			&.cols-1-small .col {
+				width: 66.66%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			&.right-wide {
+				.col:first-child {
+					width: 31.825%;
+				}
+				.col:last-child {
+					width: 65.175%;
+				}
+			}
+			&.left-wide {
+				.col:first-child {
+					width: 65.175%;
+				}
+				.col:last-child {
+					width: 31.825%;
+				}
+			}
+		}
+
+		.col {
+			width: 100%;
+			@include grid-media($large) {
+				padding-right: 3%;
+				&:last-child {
+					padding-right: 0;
+					}
+			}
+		}
 	}
 
-	#secondary.widget-area {
-		@include span-columns(4);
+	/*--------------------------------------------------------------
+	# Column Options
+	--------------------------------------------------------------*/
+	&.padded {
+		padding-top: 20px;
+		padding-bottom: 15px;
 	}
 
-	// Narrow
-	#primary.content-area.narrow {
-		@include span-columns(8);
-		@include shift(2);
+	&.gray {
+		background-color: $ultralight-gray;
+	}
+
+	&.red {
+		background-color: $red;
+	}
+
+	&.center {
+		text-align: center;
+	}
+
+	&.verticalcenter {
+		@include grid-media($large) {
+			.cols {
+				display: flex;
+				align-items: center;
+			}
+		}
 	}
 }
