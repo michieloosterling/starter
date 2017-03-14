@@ -91,7 +91,7 @@ function strt_inline_css() {
 	$css = file_get_contents( get_template_directory() . '/stylesheets/style-min.css');
 	echo '<style>' . $css . '</style>';
 }
-add_action( 'wp_head', 'strt_inline_css', 9999 );
+add_action( 'wp_head', 'strt_inline_css', 999 );
 
 
 // Add scripts to wp_footer
@@ -99,7 +99,7 @@ function strt_inline_scripts() {
 	$scripts = file_get_contents( get_template_directory() . '/js/strt-scripts-min.js');
 	echo '<script>' . $scripts . '</script>';
 }
-add_action( 'wp_footer', 'strt_inline_scripts', 9999 );
+add_action( 'wp_footer', 'strt_inline_scripts', 999 );
 
 
 /*--------------------------------------------------------------

@@ -10,13 +10,13 @@
 		justify-content: space-between;
 		flex-direction: column;
 		@extend .wrap;
-		@include grid-media($large) {
+		@include grid-media($medium) {
 			flex-direction: row;
 		}
 
 		.widget {
 	    	width: 100%;
-			@include grid-media($large) {
+			@include grid-media($medium) {
 		    	padding-right: 40px;
 		    	&:last-child {
 			    	padding-right: 0;

@@ -2,32 +2,26 @@
 # Header
 --------------------------------------------------------------*/
 #masthead {
+	position: relative;
 
-	.site-branding {
-
-	}
-
-	#site-navigation {
-
+	@include grid-media($medium) {
+		.site-branding {
+			float: left;
+		}
 		#primary-menu {
-
+			float: right;
 		}
-
 	}
 
-	.site-branding {
+	.site-logo {
+		padding: 1em 0;
+	}
 
-		.site-logo {
-			padding: 1em 0;
-		}
-
-		span {
-			@extend .screen-reader-text;
-		}
+	.site-branding span {
+		@extend .screen-reader-text;
 	}
 	
-
-	.menu-toggle {
+	button {
 		position: absolute;
 		right: 10px;
 		top: 10px;

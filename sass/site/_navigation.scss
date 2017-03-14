@@ -46,7 +46,7 @@
 		color: $action-color;
 	}
 
-	@include grid-media($large) {
+	@include grid-media($medium) {
 		ul {
 			ul {
 				background: $white;

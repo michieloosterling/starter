@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header(); ?> 
 	<div id="primary" class="content-area nosidebar">
 		<main id="main" class="site-main"><?php
 

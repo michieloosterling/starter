@@ -12,12 +12,11 @@
 	</footer><?php
 
 	} } ?> 
-
 	<div id="socket">
 		<span>
 			<?php echo date("Y") ?> &copy; <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php echo get_bloginfo('name'); ?></a>
 			<span class="sep"> | </span>
-			<?php echo get_bloginfo( 'description' ) ?> - <?php printf( esc_html__( 'Website by %1$s.', 'strt' ), '<a href="https://middelham.nl/" rel="designer">Bas Middelham</a>' ); ?>
+			<?php echo get_bloginfo( 'description' ) ?> - <?php printf( esc_html__( 'Website by %1$s.', 'strt' ), '<a href="https://middelham.nl">Bas Middelham</a>' ); ?>
 		</span>
 	</div>
 

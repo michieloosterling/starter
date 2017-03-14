@@ -4,6 +4,7 @@
 article {
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
+	margin-bottom: 2em;
 
 	.entry-header {
 
@@ -72,6 +73,6 @@ article {
 	}
 }
 
-article:not(.page) {
-	margin-bottom: $base-spacing * 2;
+article.page {
+	margin-bottom: 0;
 }

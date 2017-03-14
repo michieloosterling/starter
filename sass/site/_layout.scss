@@ -13,10 +13,13 @@ body {
 .wrap {
 	max-width: 1200px;
 	margin: 0 auto;
-	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .entry-content,
+.page-header,
+.post-navigation,
 #masthead {
 	@extend .wrap;
 }
@@ -25,14 +28,18 @@ body {
 # Sidebar
 --------------------------------------------------------------*/
 .content-area:not(.nosidebar) {
-	@extend .wrap;
+	max-width: 1240px;
+	margin: 0 auto;
 
+	.widget {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	@include grid-media($large) {
 		display: flex;
 
 		.site-main {
-			width: 70%;
-			margin-right: 5%;
+			width: 75%;
 		}
 
 		.widget-area {
@@ -61,6 +68,15 @@ body {
 				margin-left: auto;
 				margin-right: auto;
 			}
+			&.cols-2 .col {
+				width: 48.5%;
+			}
+			&.cols-3 .col {
+				width: 31.33%;
+			}
+			&.cols-4 .col {
+				width: 22.5%;
+			}
 			&.right-wide {
 				.col:first-child {
 					width: 31.825%;
@@ -80,12 +96,12 @@ body {
 		}
 
 		.col {
-			width: 100%;
+// 			width: 100%;
 			@include grid-media($large) {
 				padding-right: 3%;
 				&:last-child {
 					padding-right: 0;
-					}
+				}
 			}
 		}
 	}
