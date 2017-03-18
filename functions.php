@@ -24,16 +24,48 @@ function strt_setup() {
 		'caption',
 	) );
 	add_theme_support( 'customize-selective-refresh-widgets' );
+
+	add_image_size( 'standard_small', 560, 373, true );
+	add_image_size( 'standard_medium', 1160, 774, true ); 
+	add_image_size( 'standard_large', 2320, 1547, true ); 
+	
+	add_image_size( 'wide_small', 560, 315, true );
+	add_image_size( 'wide_medium', 1160, 652, true ); 
+	add_image_size( 'wide_large', 2320, 1305, true ); 
+	
+	add_image_size( 'ultrawide_small', 560, 240, true );
+	add_image_size( 'ultrawide_medium', 1160, 497, true ); 
+	add_image_size( 'ultrawide_large', 2320, 994, true ); 
+
 }
 endif;
 add_action( 'after_setup_theme', 'strt_setup' );
 
 
 /*--------------------------------------------------------------
+# Make custom image sizes selectable in Admin
+--------------------------------------------------------------*/
+function strt_sizes( $sizes ) {
+	unset( $sizes['thumbnail']);
+	unset( $sizes['medium']);
+	unset( $sizes['large']);
+	return array_merge( $sizes, array(
+		'standard_small' => __( 'Standard Small' , 'strt' ),
+		'standard_medium' => __( 'Standard Medium' , 'strt' ),
+		'standard_large' => __( 'Standard Large' , 'strt' ),
+		'wide_small' => __( 'Wide Small' , 'strt' ),
+		'wide_medium' => __( 'Wide Medium' , 'strt' ),
+		'wide_large' => __( 'Wide Large' , 'strt' ),
+	));
+}
+add_filter( 'image_size_names_choose', 'strt_sizes' );
+
+
+/*--------------------------------------------------------------
 # Content width
 --------------------------------------------------------------*/
 function strt_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'strt_content_width', 840 );
+	$GLOBALS['content_width'] = apply_filters( 'strt_content_width', 2320 );
 }
 add_action( 'after_setup_theme', 'strt_content_width', 0 );
 
@@ -80,8 +112,8 @@ add_action( 'widgets_init', 'strt_widgets_init' );
 # Enqueue JS + CSS
 --------------------------------------------------------------*/
 function strt_enqueue_scripts() {
-// 	wp_enqueue_style( 'strt-style', get_template_directory_uri() . '/stylesheets/style-min.css', array(), null );
-// 	wp_enqueue_script( 'strt-scripts', get_template_directory_uri() . '/js/strt-scripts-min.js', array(), null, true );
+	wp_enqueue_style( 'strt-style', get_template_directory_uri() . '/stylesheets/style-min.css', array(), null );
+	wp_enqueue_script( 'strt-scripts', get_template_directory_uri() . '/js/strt-scripts-min.js', array(), null, true );
 }
 add_action( 'wp_enqueue_scripts', 'strt_enqueue_scripts' );
 
@@ -91,7 +123,7 @@ function strt_inline_css() {
 	$css = file_get_contents( get_template_directory() . '/stylesheets/style-min.css');
 	echo '<style>' . $css . '</style>';
 }
-add_action( 'wp_head', 'strt_inline_css', 999 );
+// add_action( 'wp_head', 'strt_inline_css', 999 );
 
 
 // Add scripts to wp_footer
@@ -99,7 +131,7 @@ function strt_inline_scripts() {
 	$scripts = file_get_contents( get_template_directory() . '/js/strt-scripts-min.js');
 	echo '<script>' . $scripts . '</script>';
 }
-add_action( 'wp_footer', 'strt_inline_scripts', 999 );
+// add_action( 'wp_footer', 'strt_inline_scripts', 999 );
 
 
 /*--------------------------------------------------------------
@@ -117,6 +149,20 @@ require get_template_directory() . '/inc/social-widget.php';
 --------------------------------------------------------------*/
 require get_template_directory() . '/inc/acf-options.php';
 require get_template_directory() . '/inc/acf-layouts.php';
+
+
+/*--------------------------------------------------------------
+# Custom login logo
+--------------------------------------------------------------*/
+function strt_login_logo() {
+	echo '<style type="text/css">h1 a { 
+		background-image: url('.get_template_directory_uri().'/img/starter-logo@2x.png)!important; 
+		background-size: 320px!important; 
+		height: 80px!important; 
+		width: 320px!important;
+	}</style>';
+}
+add_action('login_head', 'strt_login_logo');
 
 
 /*--------------------------------------------------------------
@@ -190,37 +236,6 @@ $role->add_cap('edit_theme_options');
 
 
 /*--------------------------------------------------------------
-# Image sizes
---------------------------------------------------------------*/
-// Add custom sizes
-add_image_size( 'post_header', 760, 326, true );
-add_image_size( 'post_header_large', 1160, 497, true ); 
-
-// Make custom sizes selectable in Admin
-function strt_sizes( $sizes ) {
-	return array_merge( $sizes, array(
-		'post-header' => __( 'Post Header' , 'strt' ),
-		'post-header-large' => __( 'Post Header Large' , 'strt' ),
-	));
-}
-add_filter( 'image_size_names_choose', 'strt_sizes' );
-
-
-/*--------------------------------------------------------------
-# Custom login logo
---------------------------------------------------------------*/
-function strt_login_logo() {
-	echo '<style type="text/css">h1 a { 
-		background-image: url('.get_template_directory_uri().'/img/starter-logo@2x.png)!important; 
-		background-size: 320px!important; 
-		height: 80px!important; 
-		width: 320px!important;
-	}</style>';
-}
-add_action('login_head', 'strt_login_logo');
-
-
-/*--------------------------------------------------------------
 # Button shortcode
 --------------------------------------------------------------*/
 function strt_button_shortcode( $atts ) {
@@ -232,7 +247,7 @@ function strt_button_shortcode( $atts ) {
 			'class' => '',
 		), $atts )
 	);
-	return '<div class="btn_container ' . $align . '"><a href="' . $link . '" class="button ' . $class . '">' . $text . '</a></div>';
+	return '<div class="btn_container ' . $align . '"><span><a href="' . $link . '" class="button ' . $class . '">' . $text . '</a></span></div>';
 }
 add_shortcode( 'button', 'strt_button_shortcode' );
 

@@ -2,11 +2,11 @@
 	<div class="entry-content"><?php 
 
 		if( ! class_exists( 'acf' ) || ! get_field('hide_title') ): ?> 
-		<header class="entry-header"><?php
-			the_title( '<h1 class="entry-title">', '</h1>');
-			if( class_exists( 'acf' ) && get_field( 'subheading' ) ) { 
-				echo '<p class="entry-subtitle">' . get_field( 'subheading' ) . '</p>';
-			} ?>
+		<header class="entry-header">
+			<h1 class="entry-title"><?php the_title() ?></h1><?php 
+			if( class_exists( 'acf' ) && get_field( 'subheading' ) ) { ?> 
+			<p class="entry-subtitle"><?php the_field( 'subheading' ) ?></p><?php 
+			} ?> 
 		</header><?php 
 		endif;
 

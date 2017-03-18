@@ -478,7 +478,7 @@
 		"oA": 0,
 		"oAP": "\/js\/strt-scripts-min.js",
 		"oF": 1,
-		"sC": 1,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/languages\/nl_NL.mo": {
@@ -503,18 +503,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/LICENSE",
-		"oF": 0
-		},
-	"\/page-kitchensink.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/page-kitchensink.php",
-		"oF": 0
-		},
-	"\/page-narrow.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/page-narrow.php",
 		"oF": 0
 		},
 	"\/page-sidebar.php": {

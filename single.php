@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header(); ?> 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main"><?php
 
@@ -14,7 +14,6 @@
 	
 			endwhile; ?> 
 		</main>
-		<?php get_sidebar(); ?>
-	</div>
-
+		<?php get_sidebar(); ?> 
+	</div> 
 <?php get_footer();

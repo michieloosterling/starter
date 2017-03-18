@@ -18,7 +18,7 @@
 			<?php if( ! is_single() || ! class_exists( 'acf' ) || ! get_field('hide_featured_image') ) { ?>
 				<?php if ( has_post_thumbnail() ) { ?>
 					<a href="<?php the_permalink(); ?>">
-						<?php the_post_thumbnail('post_header'); ?>
+						<?php the_post_thumbnail('ultrawide_medium'); ?>
 					</a>
 				<?php } ?>
 			<?php } ?>

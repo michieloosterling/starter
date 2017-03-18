@@ -11,15 +11,20 @@ body {
 }
 
 .wrap {
-	max-width: 1200px;
+	max-width: 1160px;
 	margin: 0 auto;
 	padding-left: 20px;
 	padding-right: 20px;
+	@include grid-media($large) {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
 }
 
 .entry-content,
 .page-header,
 .post-navigation,
+.comments-area,
 #masthead {
 	@extend .wrap;
 }
