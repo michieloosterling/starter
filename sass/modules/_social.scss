@@ -25,12 +25,12 @@ $youtube: #bb0000;
 /* Social nav */
 ul.social-links-menu {
 	margin: 0 0 1.5em;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
 	list-style: none;
+	@include clearfix();
 
 	li {
+		display: inline;
+		float: left;
 		margin: 0 .125em;
 		padding: .25em 0;
 	}

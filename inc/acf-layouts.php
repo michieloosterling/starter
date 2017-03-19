@@ -223,8 +223,7 @@
 								'allow_null' => 0,
 								'choices' => array (
 									'standard' => 'Standard',
-									'full' => 'Full Width',
-									'full-stretched' => 'Full Width Stretched',
+									'stretched' => 'Stretched',
 								),
 								'default_value' => array (
 									0 => 'standard',

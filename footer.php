@@ -5,9 +5,9 @@
 
 	<footer id="colophon">
 		<aside class="widget-area">
-			<?php dynamic_sidebar( 'footer-1' ); ?>
-			<?php dynamic_sidebar( 'footer-2' ); ?>
-			<?php dynamic_sidebar( 'footer-3' ); ?>
+			<div><?php dynamic_sidebar( 'footer-1' ); ?></div>
+			<div><?php dynamic_sidebar( 'footer-2' ); ?></div>
+			<div><?php dynamic_sidebar( 'footer-3' ); ?></div>
 		</aside>
 	</footer><?php
 

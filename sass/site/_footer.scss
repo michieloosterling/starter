@@ -9,12 +9,11 @@
 		display: flex;
 		justify-content: space-between;
 		flex-direction: column;
-		@extend .wrap;
 		@include grid-media($medium) {
 			flex-direction: row;
 		}
 
-		.widget {
+		> div {
 	    	width: 100%;
 			@include grid-media($medium) {
 		    	padding-right: 40px;

@@ -24,16 +24,18 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'strt' ); ?></a>
 	<header id="masthead" itemscope itemtype="http://schema.org/Organization">
-		<div class="site-branding">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url">
-				<span itemprop="name"><?php bloginfo( 'name' ); ?></span>
-				<span itemprop="description"><?php echo get_bloginfo( 'description' ); ?></span>
-				<img width="190" height="48" class="site-logo" itemprop="logo" src="<?php echo get_template_directory_uri() ?>/img/starter-logo.png" alt="Logo <?php bloginfo( 'name' ); ?>" srcset="<?php echo get_template_directory_uri() ?>/img/starter-logo@2x.png 2x">
-			</a>
+		<div>
+			<div id="site-branding">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url">
+					<span itemprop="name"><?php bloginfo( 'name' ); ?></span>
+					<span itemprop="description"><?php echo get_bloginfo( 'description' ); ?></span>
+					<img width="190" height="48" id="site-logo" itemprop="logo" src="<?php echo get_template_directory_uri() ?>/img/starter-logo.png" alt="Logo <?php bloginfo( 'name' ); ?>" srcset="<?php echo get_template_directory_uri() ?>/img/starter-logo@2x.png 2x">
+				</a>
+			</div>
+			<nav id="site-navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span><?php esc_html_e( 'Menu', 'strt' ); ?></span></button><?php 
+				wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?> 
+			</nav>
 		</div>
-		<nav id="site-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span><?php esc_html_e( 'Menu', 'strt' ); ?></span></button><?php 
-			wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?> 
-		</nav>
 	</header>
 	<div id="content">

@@ -2,7 +2,6 @@
 # Main navigation
 --------------------------------------------------------------*/
 #site-navigation {
-	font-size: .875em;
 	@include clearfix();
 
 	ul {
@@ -46,7 +45,7 @@
 		color: $action-color;
 	}
 
-	@include grid-media($medium) {
+	@include grid-media($large) {
 		ul {
 			ul {
 				background: $white;
@@ -101,12 +100,10 @@
 			
 			a {
 				padding: 1.5em 1em;
-				text-transform: uppercase;
 
 				.icon {
-					display: inline-block;
+					display: initial;
 					margin-left: .375em;
-					vertical-align: middle;
 					width: .5em;
     			}
 			}

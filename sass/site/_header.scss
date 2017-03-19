@@ -2,22 +2,23 @@
 # Header
 --------------------------------------------------------------*/
 #masthead {
+	background-color: $ultralight-gray;
 	position: relative;
 
-	@include grid-media($medium) {
-		.site-branding {
-			float: left;
-		}
-		#primary-menu {
-			float: right;
+	@include grid-media($large) {
+		> div {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 		}
 	}
 
-	.site-logo {
-		padding: 1em 0;
+	#site-logo {
+		display: block;
+		margin: 1em 0;
 	}
 
-	.site-branding span {
+	#site-branding span {
 		@extend .screen-reader-text;
 	}
 	
@@ -38,7 +39,7 @@
 	display: block;
 }
 
-@include grid-media($medium) {
+@include grid-media($large) {
 	.menu-toggle {
 		display: none;
 	}

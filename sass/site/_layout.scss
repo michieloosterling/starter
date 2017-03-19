@@ -3,7 +3,6 @@
 --------------------------------------------------------------*/
 html {
 	box-sizing: border-box;
-	overflow-y: scroll;
 }
 
 body {
@@ -13,6 +12,9 @@ body {
 .wrap {
 	max-width: 1160px;
 	margin: 0 auto;
+}
+
+.padding {
 	padding-left: 20px;
 	padding-right: 20px;
 	@include grid-media($large) {
@@ -21,33 +23,28 @@ body {
 	}
 }
 
-.entry-content,
-.page-header,
-.post-navigation,
-.comments-area,
-#masthead {
+#masthead > div,
+.content-area:not(.wide),
+.content-area.wide .entry-content, 
+#colophon .widget-area {
+	@extend .padding;
 	@extend .wrap;
 }
 
 /*--------------------------------------------------------------
-# Sidebar
+# Templates
 --------------------------------------------------------------*/
-.content-area:not(.nosidebar) {
-	max-width: 1240px;
-	margin: 0 auto;
-
-	.widget {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
+.content-area:not(.wide) {
 	@include grid-media($large) {
-		display: flex;
+	display: flex;
 
 		.site-main {
-			width: 75%;
+			width: 72%;
 		}
 
 		.widget-area {
+			margin-left: 3%;
+			margin-top: $base-spacing;
 			width: 25%;
 		}
 	}
@@ -57,14 +54,21 @@ body {
 # Columns
 --------------------------------------------------------------*/
 .row {
+	
+	.content-area.wide & {
+		&[data-stretch-type="standard"] .cols {
+			@extend .padding;
+			@extend .wrap;
+		}
+		&[data-stretch-type="stretched"] .cols {
+			@extend .padding;
+		}
+	}
 
 	.cols {
 		display: flex;
 		justify-content: space-between;
 		flex-direction: column;
-		&:not([data-stretch-type="full-stretched"]) {
-			@extend .wrap;
-		}
 
 		@include grid-media($large) {
 			flex-direction: row;
@@ -101,7 +105,6 @@ body {
 		}
 
 		.col {
-// 			width: 100%;
 			@include grid-media($large) {
 				padding-right: 3%;
 				&:last-child {
