@@ -81,12 +81,8 @@
 					text-transform: none;
 					font-weight: normal;
 					.icon {
-						margin-top: -9px;
-						left: auto;
-						position: absolute;
-						right: 1em;
-						top: 50%;
 						transform: rotate(-90deg);
+						float: right;
 					}
 				}
 	
@@ -108,11 +104,11 @@
 				text-transform: uppercase;
 
 				.icon {
-					display: inline;
-					right: 0;
-					position: absolute;
-					margin-top: .25em;
-				}
+					display: inline-block;
+					margin-left: .375em;
+					vertical-align: middle;
+					width: .5em;
+    			}
 			}
 		}
 	}

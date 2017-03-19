@@ -22,7 +22,6 @@ $vimeo: #1ab7ea;
 $wordpress: #21759b;
 $youtube: #bb0000;
 
-
 /* Social nav */
 ul.social-links-menu {
 	margin: 0 0 1.5em;
@@ -40,12 +39,12 @@ ul.social-links-menu {
 		background-color: $action-color;
 		border-radius: 1em;
 		color: #fff;
-		display: inline-block;
-		height: 2em;
-		text-align: center;
 		transition: background-color $base-duration $base-timing;
-		line-height: 2.25em;
+		height: 2em;
 		width: 2em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		&:hover,
 		&:focus {
 			background: $dark-gray;
@@ -62,5 +61,4 @@ ul.social-links-menu {
 		&[href*="twitter.com"] { 		&:hover, &:focus { background: $twitter; } }
 		&[href*="youtube.com"] { 		&:hover, &:focus { background: $youtube; } }
 	}
-	
 }

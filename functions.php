@@ -112,26 +112,24 @@ add_action( 'widgets_init', 'strt_widgets_init' );
 # Enqueue JS + CSS
 --------------------------------------------------------------*/
 function strt_enqueue_scripts() {
-	wp_enqueue_style( 'strt-style', get_template_directory_uri() . '/stylesheets/style-min.css', array(), null );
-	wp_enqueue_script( 'strt-scripts', get_template_directory_uri() . '/js/strt-scripts-min.js', array(), null, true );
+// 	wp_enqueue_style( 'strt-style', get_template_directory_uri() . '/stylesheets/style-min.css', array(), null );
+// 	wp_enqueue_script( 'strt-scripts', get_template_directory_uri() . '/js/strt-scripts-min.js', array(), null, true );
 }
 add_action( 'wp_enqueue_scripts', 'strt_enqueue_scripts' );
-
 
 // Add CSS to wp_head
 function strt_inline_css() {
 	$css = file_get_contents( get_template_directory() . '/stylesheets/style-min.css');
 	echo '<style>' . $css . '</style>';
 }
-// add_action( 'wp_head', 'strt_inline_css', 999 );
-
+add_action( 'wp_head', 'strt_inline_css', 999 );
 
 // Add scripts to wp_footer
 function strt_inline_scripts() {
 	$scripts = file_get_contents( get_template_directory() . '/js/strt-scripts-min.js');
 	echo '<script>' . $scripts . '</script>';
 }
-// add_action( 'wp_footer', 'strt_inline_scripts', 999 );
+add_action( 'wp_footer', 'strt_inline_scripts', 999 );
 
 
 /*--------------------------------------------------------------

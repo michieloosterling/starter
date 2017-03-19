@@ -988,13 +988,9 @@ body {
     font-weight: normal;
   }
   #site-navigation ul ul a .icon {
-    margin-top: -9px;
-    left: auto;
-    position: absolute;
-    right: 1em;
-    top: 50%;
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
+    float: right;
   }
   #site-navigation ul li {
     border: 0;
@@ -1010,10 +1006,10 @@ body {
     text-transform: uppercase;
   }
   #site-navigation ul a .icon {
-    display: inline;
-    right: 0;
-    position: absolute;
-    margin-top: .25em;
+    display: inline-block;
+    margin-left: .375em;
+    vertical-align: middle;
+    width: .5em;
   }
 }
 
@@ -1553,10 +1549,12 @@ article.page {
 # SVG Icons base styles
 --------------------------------------------------------------*/
 .icon {
-  display: inline-block;
+  display: inline;
   fill: currentColor;
   height: 1em;
+  line-height: 1em;
   position: relative;
+  vertical-align: middle;
   width: 1em;
 }
 
@@ -1587,13 +1585,19 @@ ul.social-links-menu a {
   background-color: #1268a1;
   border-radius: 1em;
   color: #fff;
-  display: inline-block;
-  height: 2em;
-  text-align: center;
   -webkit-transition: background-color 300ms ease;
   transition: background-color 300ms ease;
-  line-height: 2.25em;
+  height: 2em;
   width: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 ul.social-links-menu a:hover, ul.social-links-menu a:focus {

@@ -62,7 +62,7 @@ function strt_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'strt' ) );
 		if ( $categories_list && strt_categorized_blog() ) {
-			printf( '<span class="cat-links">' . strt_get_svg( array( 'icon' => 'folder-open' ) ) . esc_html__( 'Posted in %1$s', 'strt' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links">' . strt_get_svg( array( 'icon' => 'folder' ) ) . esc_html__( 'Posted in %1$s', 'strt' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
