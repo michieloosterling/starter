@@ -33,6 +33,7 @@
   ],
   "private": true,
   "dependencies": {
-    "webfontloader": "^1.6.27"
+    "webfontloader": "^1.6.27",
+    "jquery": "^3.2.0"
   }
 }

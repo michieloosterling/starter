@@ -65,7 +65,7 @@ add_filter( 'image_size_names_choose', 'strt_sizes' );
 # Content width
 --------------------------------------------------------------*/
 function strt_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'strt_content_width', 2320 );
+	$GLOBALS['content_width'] = apply_filters( 'strt_content_width', 1160 );
 }
 add_action( 'after_setup_theme', 'strt_content_width', 0 );
 
