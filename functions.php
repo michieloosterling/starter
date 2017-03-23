@@ -185,6 +185,9 @@ if( !current_user_can('administrator') ) {
 	add_filter( 'gform_display_add_form_button', '__return_false');
 }
 
+// Enable scroll to confirmation message after submit
+add_filter( 'gform_confirmation_anchor', '__return_true' );
+
 //  Enable 'Hide labels' option in Gravity Forms
 add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
 
