@@ -5,7 +5,7 @@
 	background-color: $ultralight-gray;
 	position: relative;
 
-	> div {
+	header {
 		display: flex;
 		flex-direction: column;
 		@include grid-media($medium) {
@@ -20,7 +20,7 @@
 		margin: 1em 0;
 	}
 
-	#site-branding span {
+	a > span {
 		@extend .screen-reader-text;
 	}
 	

@@ -232,6 +232,7 @@ button, [type='button'], [type='reset'], [type='submit'] {
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
   line-height: 1;
+  margin-bottom: 1.5em;
   padding: 0.75em 1.5em;
   text-align: center;
   text-decoration: none;
@@ -650,7 +651,7 @@ hr {
 }
 
 blockquote {
-  background: #f7f7f7;
+  background: #f2f2f2;
   margin: 1.5em 0;
   padding: 1.5em;
   position: relative;
@@ -708,7 +709,7 @@ body {
   background: #fff;
 }
 
-.wrap, #masthead > div,
+.wrap, #masthead > header,
 .content-area:not(.wide),
 .content-area.wide .entry-content,
 #comments,
@@ -717,7 +718,7 @@ body {
   margin: 0 auto;
 }
 
-.padding, #masthead > div,
+.padding, #masthead > header,
 .content-area:not(.wide),
 .content-area.wide .entry-content,
 #comments,
@@ -727,7 +728,7 @@ body {
 }
 
 @media only screen and (min-width: 1024px) {
-  .padding, #masthead > div,
+  .padding, #masthead > header,
   .content-area:not(.wide),
   .content-area.wide .entry-content,
   #comments,
@@ -786,11 +787,11 @@ body {
   display: block;
   font-size: .9375em;
   font-weight: bold;
-  margin-bottom: .125em;
+  margin-bottom: .25rem;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  padding: .5em 0;
+  padding: .5rem;
 }
 
 #site-navigation ul a:active, #site-navigation ul a:hover {
@@ -815,6 +816,9 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+  #site-navigation ul {
+    margin: 0;
+  }
   #site-navigation ul ul {
     background: white;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -830,7 +834,7 @@ body {
     top: 0;
   }
   #site-navigation ul ul li:hover, #site-navigation ul ul li:focus {
-    background: #f7f7f7;
+    background: #f2f2f2;
   }
   #site-navigation ul ul li:hover > ul,
   #site-navigation ul ul li.focus > ul {
@@ -914,18 +918,18 @@ body {
 
 .pagination .page-numbers.current,
 .pagination a.page-numbers:hover {
-  background: #f7f7f7;
+  background: #f2f2f2;
 }
 
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 #masthead {
-  background-color: #f7f7f7;
+  background-color: #f2f2f2;
   position: relative;
 }
 
-#masthead > div {
+#masthead header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -936,7 +940,7 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-  #masthead > div {
+  #masthead header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1235,7 +1239,7 @@ article.page {
 }
 
 .row.gray {
-  background-color: #f7f7f7;
+  background-color: #f2f2f2;
 }
 
 .row.red {
@@ -1272,10 +1276,6 @@ article.page {
 
 .widget select {
   max-width: 100%;
-}
-
-.widget li {
-  padding: .25em 0;
 }
 
 /*--------------------------------------------------------------
@@ -1353,7 +1353,7 @@ article.page {
 # Tag Cloud widget
 --------------------------------------------------------------*/
 .tagcloud a {
-  background-color: #f7f7f7;
+  background-color: #f2f2f2;
   border: 1px solid #e6e5e5;
   border-radius: 3px;
   color: #333333;
@@ -1375,7 +1375,7 @@ article.page {
 # Footer
 --------------------------------------------------------------*/
 #colophon {
-  background-color: #f7f7f7;
+  background-color: #f2f2f2;
   padding-top: 1.5em;
 }
 
@@ -1424,7 +1424,7 @@ article.page {
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
-.screen-reader-text, #masthead #site-branding span {
+.screen-reader-text, #masthead a > span {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
   height: 1px;
@@ -1432,7 +1432,7 @@ article.page {
   overflow: hidden;
 }
 
-.screen-reader-text:focus, #masthead #site-branding span:focus {
+.screen-reader-text:focus, #masthead a > span:focus {
   background-color: #FFF;
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -1753,7 +1753,7 @@ ul.social-links-menu a[href*="youtube.com"]:hover, ul.social-links-menu a[href*=
 .comments-area ol.comment-list li.pingback {
   padding: 1em;
   margin-bottom: 0.75em;
-  background: #f7f7f7;
+  background: #f2f2f2;
 }
 
 .comments-area ol.comment-list li.comment.bypostauthor {
