@@ -8,20 +8,8 @@ ol {
   padding: 0;
 }
 
-dl {
-  margin: 0;
-}
-
-dt {
-  font-weight: 600;
-  margin: 0;
-}
-
-dd {
-  margin: 0;
-}
-
-.entry-content {
+.entry-content,
+.widget-area {
 	ul,
 	ol {
 		margin: 1.5em 0 1.5em 1.5em;
@@ -42,6 +30,10 @@ dd {
 		margin-bottom: 0;
 	}
 
+
+}
+
+.entry-content {
 	li {
 		margin-top: .25em;
 		margin-bottom: .25em;
@@ -52,17 +44,17 @@ dd {
 		margin-top: .25em;
 		margin-bottom: .25em;
 	}
+}
 
-	dl {
-		margin: 1.5em 0;
-	}
-	
-	dt {
-	  font-weight: 600;
-	  margin: 0;
-	}
-	
-	dd {
-	  margin-left: 2em;
-	}
+dl {
+  margin: 0;
+}
+
+dt {
+  font-weight: 600;
+  margin: 0;
+}
+
+dd {
+  margin: 0;
 }

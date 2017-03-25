@@ -27,6 +27,9 @@
 			}
 			.comment-meta {
 				margin-bottom: .5em;
+				.comment-awaiting-moderation {
+					font-style: italic;
+				}
 			}
 			.comment-metadata {
 				margin-bottom: $small-spacing;

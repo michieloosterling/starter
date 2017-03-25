@@ -1,4 +1,17 @@
 /*--------------------------------------------------------------
+# Image URL mixin. Usage: get-image-url("image.png")
+--------------------------------------------------------------*/
+@function get-image-url($url) {
+	$base_url: "http://localhost:8888/wp-content/themes/starter/img/" !default;
+    @if function-exists(image-url) {
+        @return image-url($url);
+    }
+    @else {
+        @return url($base_url + $url);
+    }
+}
+
+/*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
 html {
@@ -25,7 +38,8 @@ body {
 
 #masthead > div,
 .content-area:not(.wide),
-.content-area.wide .entry-content, 
+.content-area.wide .entry-content,
+#comments,
 #colophon .widget-area {
 	@extend .padding;
 	@extend .wrap;
@@ -35,8 +49,8 @@ body {
 # Templates
 --------------------------------------------------------------*/
 .content-area:not(.wide) {
-	@include grid-media($large) {
-	display: flex;
+	@include grid-media($medium) {
+		display: flex;
 
 		.site-main {
 			width: 72%;
@@ -44,102 +58,7 @@ body {
 
 		.widget-area {
 			margin-left: 3%;
-			margin-top: $base-spacing;
 			width: 25%;
-		}
-	}
-}
-
-/*--------------------------------------------------------------
-# Columns
---------------------------------------------------------------*/
-.row {
-	
-	.content-area.wide & {
-		&[data-stretch-type="standard"] .cols {
-			@extend .padding;
-			@extend .wrap;
-		}
-		&[data-stretch-type="stretched"] .cols {
-			@extend .padding;
-		}
-	}
-
-	.cols {
-		display: flex;
-		justify-content: space-between;
-		flex-direction: column;
-
-		@include grid-media($large) {
-			flex-direction: row;
-			&.cols-1-small .col {
-				width: 66.66%;
-				margin-left: auto;
-				margin-right: auto;
-			}
-			&.cols-2 .col {
-				width: 48.5%;
-			}
-			&.cols-3 .col {
-				width: 31.33%;
-			}
-			&.cols-4 .col {
-				width: 22.5%;
-			}
-			&.right-wide {
-				.col:first-child {
-					width: 31.825%;
-				}
-				.col:last-child {
-					width: 65.175%;
-				}
-			}
-			&.left-wide {
-				.col:first-child {
-					width: 65.175%;
-				}
-				.col:last-child {
-					width: 31.825%;
-				}
-			}
-		}
-
-		.col {
-			@include grid-media($large) {
-				padding-right: 3%;
-				&:last-child {
-					padding-right: 0;
-				}
-			}
-		}
-	}
-
-	/*--------------------------------------------------------------
-	# Column Options
-	--------------------------------------------------------------*/
-	&.padded {
-		padding-top: 20px;
-		padding-bottom: 15px;
-	}
-
-	&.gray {
-		background-color: $ultralight-gray;
-	}
-
-	&.red {
-		background-color: $red;
-	}
-
-	&.center {
-		text-align: center;
-	}
-
-	&.verticalcenter {
-		@include grid-media($large) {
-			.cols {
-				display: flex;
-				align-items: center;
-			}
 		}
 	}
 }

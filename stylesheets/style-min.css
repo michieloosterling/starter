@@ -227,7 +227,7 @@ button, [type='button'], [type='reset'], [type='submit'] {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1em;
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
@@ -305,7 +305,7 @@ input,
 select,
 textarea {
   display: block;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1em;
 }
 
@@ -394,14 +394,11 @@ select {
 .search-form .search-submit {
   border-radius: 0;
   bottom: 0;
-  padding: 0.5em .75em;
+  padding: 0;
   position: absolute;
   right: 0;
   top: 0;
-}
-
-.search-form .search-submit .icon {
-  vertical-align: top;
+  width: 37px;
 }
 
 /*--------------------------------------------------------------
@@ -414,35 +411,28 @@ ol {
   padding: 0;
 }
 
-dl {
-  margin: 0;
-}
-
-dt {
-  font-weight: 600;
-  margin: 0;
-}
-
-dd {
-  margin: 0;
-}
-
 .entry-content ul,
-.entry-content ol {
+.entry-content ol,
+.widget-area ul,
+.widget-area ol {
   margin: 1.5em 0 1.5em 1.5em;
   padding: 0;
 }
 
-.entry-content ul {
+.entry-content ul,
+.widget-area ul {
   list-style: disc;
 }
 
-.entry-content ol {
+.entry-content ol,
+.widget-area ol {
   list-style: decimal;
 }
 
 .entry-content li > ul,
-.entry-content li > ol {
+.entry-content li > ol,
+.widget-area li > ul,
+.widget-area li > ol {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -458,17 +448,17 @@ dd {
   margin-bottom: .25em;
 }
 
-.entry-content dl {
-  margin: 1.5em 0;
+dl {
+  margin: 0;
 }
 
-.entry-content dt {
+dt {
   font-weight: 600;
   margin: 0;
 }
 
-.entry-content dd {
-  margin-left: 2em;
+dd {
+  margin: 0;
 }
 
 /*--------------------------------------------------------------
@@ -557,70 +547,19 @@ th {
   opacity: 0;
 }
 
-.wf-oswald-n4-active h1, .wf-oswald-n4-active h2, .wf-oswald-n4-active h3, .wf-oswald-n4-active h4, .wf-oswald-n4-active h5, .wf-oswald-n4-active h6,
-.wf-active h1,
-.wf-active h2,
-.wf-active h3,
-.wf-active h4,
-.wf-active h5,
-.wf-active h6 {
-  font-family: "Oswald", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+.wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active h5, .wf-active h6, .wf-active p, .wf-active span, .wf-active li, .wf-active td, .wf-active .button, .wf-active input {
   opacity: 1;
   -webkit-transition: opacity 300ms;
   transition: opacity 300ms;
 }
 
-.wf-opensans-n4-active p, .wf-opensans-n4-active span, .wf-opensans-n4-active li, .wf-opensans-n4-active td, .wf-opensans-n4-active .button, .wf-opensans-n4-active input,
-.wf-active p,
-.wf-active span,
-.wf-active li,
-.wf-active td,
-.wf-active .button,
-.wf-active input {
+.wf-inactive h1, .wf-inactive h2, .wf-inactive h3, .wf-inactive h4, .wf-inactive h5, .wf-inactive h6, .wf-inactive p, .wf-inactive span, .wf-inactive li, .wf-inactive td, .wf-inactive .button, .wf-inactive input {
   opacity: 1;
-  -webkit-transition: opacity 300ms;
-  transition: opacity 300ms;
-}
-
-.wf-opensans-n4-active body,
-.wf-active body {
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
-
-.wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active h5, .wf-active h6, .wf-active p, .wf-active span, .wf-active li, .wf-active td, .wf-active .button, .wf-active input,
-.wf-inactive h1,
-.wf-inactive h2,
-.wf-inactive h3,
-.wf-inactive h4,
-.wf-inactive h5,
-.wf-inactive h6,
-.wf-inactive p,
-.wf-inactive span,
-.wf-inactive li,
-.wf-inactive td,
-.wf-inactive .button,
-.wf-inactive input {
-  opacity: 1;
-}
-
-.wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active h5, .wf-active h6,
-.wf-inactive h1,
-.wf-inactive h2,
-.wf-inactive h3,
-.wf-inactive h4,
-.wf-inactive h5,
-.wf-inactive h6 {
-  font-family: "Oswald", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
-
-.wf-active body,
-.wf-inactive body {
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 body {
   color: #333333;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1em;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -633,7 +572,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Oswald", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   line-height: 1.2;
   font-weight: 400;
   text-transform: uppercase;
@@ -751,6 +690,13 @@ pre {
   padding: 1.6em;
 }
 
+.larger {
+  font-size: 1.125em;
+}
+
+/*--------------------------------------------------------------
+# Image URL mixin. Usage: get-image-url("image.png")
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
@@ -765,6 +711,7 @@ body {
 .wrap, #masthead > div,
 .content-area:not(.wide),
 .content-area.wide .entry-content,
+#comments,
 #colophon .widget-area, .content-area.wide .row[data-stretch-type="standard"] .cols {
   max-width: 1160px;
   margin: 0 auto;
@@ -773,6 +720,7 @@ body {
 .padding, #masthead > div,
 .content-area:not(.wide),
 .content-area.wide .entry-content,
+#comments,
 #colophon .widget-area, .content-area.wide .row[data-stretch-type="standard"] .cols, .content-area.wide .row[data-stretch-type="stretched"] .cols {
   padding-left: 20px;
   padding-right: 20px;
@@ -782,6 +730,7 @@ body {
   .padding, #masthead > div,
   .content-area:not(.wide),
   .content-area.wide .entry-content,
+  #comments,
   #colophon .widget-area, .content-area.wide .row[data-stretch-type="standard"] .cols, .content-area.wide .row[data-stretch-type="stretched"] .cols {
     padding-left: 40px;
     padding-right: 40px;
@@ -791,7 +740,7 @@ body {
 /*--------------------------------------------------------------
 # Templates
 --------------------------------------------------------------*/
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .content-area:not(.wide) {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -802,102 +751,7 @@ body {
   }
   .content-area:not(.wide) .widget-area {
     margin-left: 3%;
-    margin-top: 1.5em;
     width: 25%;
-  }
-}
-
-/*--------------------------------------------------------------
-# Columns
---------------------------------------------------------------*/
-.row {
-  /*--------------------------------------------------------------
-	# Column Options
-	--------------------------------------------------------------*/
-}
-
-.row .cols {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media only screen and (min-width: 1024px) {
-  .row .cols {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .row .cols.cols-1-small .col {
-    width: 66.66%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .row .cols.cols-2 .col {
-    width: 48.5%;
-  }
-  .row .cols.cols-3 .col {
-    width: 31.33%;
-  }
-  .row .cols.cols-4 .col {
-    width: 22.5%;
-  }
-  .row .cols.right-wide .col:first-child {
-    width: 31.825%;
-  }
-  .row .cols.right-wide .col:last-child {
-    width: 65.175%;
-  }
-  .row .cols.left-wide .col:first-child {
-    width: 65.175%;
-  }
-  .row .cols.left-wide .col:last-child {
-    width: 31.825%;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .row .cols .col {
-    padding-right: 3%;
-  }
-  .row .cols .col:last-child {
-    padding-right: 0;
-  }
-}
-
-.row.padded {
-  padding-top: 20px;
-  padding-bottom: 15px;
-}
-
-.row.gray {
-  background-color: #f7f7f7;
-}
-
-.row.red {
-  background-color: #d9553a;
-}
-
-.row.center {
-  text-align: center;
-}
-
-@media only screen and (min-width: 1024px) {
-  .row.verticalcenter .cols {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -913,19 +767,29 @@ body {
 #site-navigation ul {
   display: none;
   list-style: none;
-  margin: 0;
+  margin: 0 0 1.5em;
   padding: 0;
 }
 
 #site-navigation ul ul {
-  padding: 0 0 0 1em;
+  margin: 0;
+}
+
+#site-navigation ul ul a {
+  text-transform: none;
+  font-weight: normal;
 }
 
 #site-navigation ul a {
-  display: block;
-  font-weight: 600;
-  text-decoration: none;
   color: #333333;
+  background-color: #e6e5e5;
+  display: block;
+  font-size: .9375em;
+  font-weight: bold;
+  margin-bottom: .125em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
   padding: .5em 0;
 }
 
@@ -950,7 +814,7 @@ body {
   color: #1268a1;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   #site-navigation ul ul {
     background: white;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -973,10 +837,9 @@ body {
     left: 100%;
   }
   #site-navigation ul ul a {
-    width: 220px;
+    width: 180px;
     padding: 1em;
-    text-transform: none;
-    font-weight: normal;
+    text-align: inherit;
   }
   #site-navigation ul ul a .icon {
     -webkit-transform: rotate(-90deg);
@@ -993,7 +856,9 @@ body {
     left: auto;
   }
   #site-navigation ul a {
-    padding: 1.5em 1em;
+    background-color: inherit;
+    margin-bottom: 0;
+    padding: 1em;
   }
   #site-navigation ul a .icon {
     display: initial;
@@ -1060,17 +925,28 @@ body {
   position: relative;
 }
 
-@media only screen and (min-width: 1024px) {
+#masthead > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
   #masthead > div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -1093,7 +969,7 @@ body {
   display: block;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .menu-toggle {
     display: none;
   }
@@ -1258,10 +1134,134 @@ article.page {
 }
 
 /*--------------------------------------------------------------
+# Columns
+--------------------------------------------------------------*/
+.row {
+  /*--------------------------------------------------------------
+	# Column Options
+	--------------------------------------------------------------*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.row .cols {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.row .cols .col {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .row .cols.cols-1-small .col {
+    -ms-flex-preferred-size: 66.66%;
+        flex-basis: 66.66%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .row .cols.cols-2 .col {
+    -ms-flex-preferred-size: 48.5%;
+        flex-basis: 48.5%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .row .cols.cols-3 .col {
+    -ms-flex-preferred-size: 31.33%;
+        flex-basis: 31.33%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .row .cols.cols-4 .col {
+    -ms-flex-preferred-size: 48.5%;
+        flex-basis: 48.5%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .row .cols.cols-4 .col {
+    -ms-flex-preferred-size: 22.5%;
+        flex-basis: 22.5%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .row .cols.right-wide .col:first-child {
+    -ms-flex-preferred-size: 31.825%;
+        flex-basis: 31.825%;
+  }
+  .row .cols.right-wide .col:last-child {
+    -ms-flex-preferred-size: 65.175%;
+        flex-basis: 65.175%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .row .cols.left-wide .col:first-child {
+    -ms-flex-preferred-size: 65.175%;
+        flex-basis: 65.175%;
+  }
+  .row .cols.left-wide .col:last-child {
+    -ms-flex-preferred-size: 31.825%;
+        flex-basis: 31.825%;
+  }
+}
+
+.row.padded {
+  padding-top: 1.5em;
+  padding-bottom: .5em;
+}
+
+@media only screen and (min-width: 768px) {
+  .row.padded {
+    padding-top: 2em;
+    padding-bottom: 1em;
+  }
+}
+
+.row.gray {
+  background-color: #f7f7f7;
+}
+
+.row.red {
+  background-color: #d9553a;
+}
+
+.row.center {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .row.verticalcenter .cols {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+/*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-  margin: 0 0 2em;
+  margin: 2em 0;
   font-size: .9375em;
 }
 
@@ -1767,6 +1767,10 @@ ul.social-links-menu a[href*="youtube.com"]:hover, ul.social-links-menu a[href*=
 
 .comments-area ol.comment-list li.comment .comment-meta {
   margin-bottom: .5em;
+}
+
+.comments-area ol.comment-list li.comment .comment-meta .comment-awaiting-moderation {
+  font-style: italic;
 }
 
 .comments-area ol.comment-list li.comment .comment-metadata {

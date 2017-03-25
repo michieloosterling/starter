@@ -5,11 +5,13 @@
 	background-color: $ultralight-gray;
 	position: relative;
 
-	@include grid-media($large) {
-		> div {
-			display: flex;
-			justify-content: space-between;
+	> div {
+		display: flex;
+		flex-direction: column;
+		@include grid-media($medium) {
 			align-items: center;
+			flex-direction: row;
+			justify-content: space-between;
 		}
 	}
 
@@ -30,7 +32,6 @@
 	}
 }
 
-
 /*--------------------------------------------------------------
 # Menu toggle
 --------------------------------------------------------------*/
@@ -39,7 +40,7 @@
 	display: block;
 }
 
-@include grid-media($large) {
+@include grid-media($medium) {
 	.menu-toggle {
 		display: none;
 	}
@@ -47,7 +48,6 @@
 		display: block;
 	}
 }
-
 
 /*--------------------------------------------------------------
 # Hamburger menu

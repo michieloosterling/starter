@@ -19,8 +19,8 @@ $ultralight-gray: 	hsl(0, 0%, 97%);
 $white:				hsl(0, 0%, 100%);
 
 // Typography
-$base-font-family: $font-stack-helvetica;
-$heading-font-family: $base-font-family;
+$base-font-family: 'Open Sans', $font-stack-helvetica;
+$heading-font-family: 'Oswald', $base-font-family;
 
 // Font Sizes
 $base-font-size: 1em;

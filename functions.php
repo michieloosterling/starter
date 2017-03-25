@@ -23,8 +23,6 @@ function strt_setup() {
 		'gallery',
 		'caption',
 	) );
-	add_theme_support( 'customize-selective-refresh-widgets' );
-
 	add_image_size( 'standard_small', 560, 373, true );
 	add_image_size( 'standard_medium', 1160, 774, true ); 
 	add_image_size( 'standard_large', 2320, 1547, true ); 
@@ -36,7 +34,6 @@ function strt_setup() {
 	add_image_size( 'ultrawide_small', 560, 240, true );
 	add_image_size( 'ultrawide_medium', 1160, 497, true ); 
 	add_image_size( 'ultrawide_large', 2320, 994, true ); 
-
 }
 endif;
 add_action( 'after_setup_theme', 'strt_setup' );
@@ -148,7 +145,7 @@ require get_template_directory() . '/inc/social-widget.php';
 require get_template_directory() . '/inc/acf-options.php';
 require get_template_directory() . '/inc/acf-layouts.php';
 
-
+ 
 /*--------------------------------------------------------------
 # Custom login logo
 --------------------------------------------------------------*/
@@ -180,7 +177,7 @@ add_filter( 'gform_cdata_open', 'wrap_gform_cdata_open' );
 add_filter( 'gform_cdata_close', 'wrap_gform_cdata_close' );
 
 
-//  Remove Gravity Forms 'Add Form' button
+//  Remove Gravity Forms 'Add Form' button for non-admins
 if( !current_user_can('administrator') ) {
 	add_filter( 'gform_display_add_form_button', '__return_false');
 }
@@ -197,6 +194,9 @@ function grant_gforms_editor_access() {
 	$role -> add_cap( 'gform_full_access' );
 }
 add_action( 'after_switch_theme', 'grant_gforms_editor_access' );
+
+// Enable scroll to confirmation message after submit
+add_filter( 'gform_confirmation_anchor', '__return_true' );
 
 // Set tabindex to 0 al all Gravity Forms
 function change_tabindex( $tabindex, $form ) {

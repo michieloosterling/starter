@@ -1,0 +1,1 @@
+{"settings":{"toolbar_1":"formatselect,styleselect,bold,italic,bullist,link,wp_adv","toolbar_2":"numlist,outdent,indent,aligncenter,removeformat,code","toolbar_3":"","toolbar_4":"","options":"advlist","plugins":"code,advlist,importcss"},"admin_settings":{"options":"importcss","disabled_editors":""}}

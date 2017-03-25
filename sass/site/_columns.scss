@@ -1,0 +1,118 @@
+/*--------------------------------------------------------------
+# Columns
+--------------------------------------------------------------*/
+.row {
+	
+	.content-area.wide & {
+
+		&[data-stretch-type="standard"] .cols {
+			@extend .padding;
+			@extend .wrap;
+		}
+
+		&[data-stretch-type="stretched"] .cols {
+			@extend .padding;
+		}
+	}
+
+	.cols {
+		display: flex;
+		justify-content: space-between;
+		flex-flow: row wrap;
+
+		.col {
+			flex-basis: 100%;
+		}
+
+		&.cols-1-small .col {
+			@include grid-media($medium) {
+				flex-basis: 66.66%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		&.cols-2 .col {
+			@include grid-media($medium) {
+				flex-basis: 48.5%;
+			}
+		}
+
+		&.cols-3 .col {
+			@include grid-media($medium) {
+				flex-basis: 31.33%;
+			}
+		}
+
+		&.cols-4 .col {
+			@include grid-media($medium) {
+				flex-basis: 48.5%;
+			}
+			@include grid-media($large) {
+				flex-basis: 22.5%;
+			}
+		}
+
+		&.right-wide {
+			@include grid-media($medium) {
+	
+				.col:first-child {
+					flex-basis: 31.825%;
+				}
+	
+				.col:last-child {
+					flex-basis: 65.175%;
+				}
+			}
+		}
+
+		&.left-wide {
+			@include grid-media($medium) {
+	
+				.col:first-child {
+					flex-basis: 65.175%;
+				}
+	
+				.col:last-child {
+					flex-basis: 31.825%;
+				}
+			}
+		}
+	}
+
+	/*--------------------------------------------------------------
+	# Column Options
+	--------------------------------------------------------------*/
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	&.padded {
+		padding-top: 1.5em;
+		padding-bottom: .5em;
+		@include grid-media($medium) {
+			padding-top: 2em;
+			padding-bottom: 1em;
+		}
+	}
+
+	&.gray {
+		background-color: $ultralight-gray;
+	}
+
+	&.red {
+		background-color: $red;
+	}
+
+	&.center {
+		text-align: center;
+	}
+
+	&.verticalcenter {
+		@include grid-media($medium) {
+			.cols {
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+}

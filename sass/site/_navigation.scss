@@ -7,18 +7,27 @@
 	ul {
 		display: none;
 		list-style: none;
-		margin: 0;
+		margin: 0 0 1.5em;
 		padding: 0;
 
 		ul {
-			padding: 0 0 0 1em;
+			margin: 0;
+			a {
+				text-transform: none;
+				font-weight: normal;
+			}
 		}
 		
 		a {
-			display: block;
-			font-weight: 600;
-			text-decoration: none;
 			color: $base-font-color;
+			background-color: $light-gray;
+			display: block;
+			font-size: .9375em;
+			font-weight: bold;
+			margin-bottom: .125em;
+			text-decoration: none;
+			text-align: center;
+			text-transform: uppercase;
 			padding: .5em 0;
 
 			&:active,
@@ -45,8 +54,9 @@
 		color: $action-color;
 	}
 
-	@include grid-media($large) {
+	@include grid-media($medium) {
 		ul {
+
 			ul {
 				background: $white;
 				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -60,6 +70,7 @@
 				ul {
 					left: -999em;
 					top: 0;
+					
 				}
 	
 				li {
@@ -75,10 +86,9 @@
 				}
 	
 				a {
-					width: 220px;
+					width: 180px;
 					padding: 1em;
-					text-transform: none;
-					font-weight: normal;
+					text-align: inherit;
 					.icon {
 						transform: rotate(-90deg);
 						float: right;
@@ -99,7 +109,9 @@
 			}
 			
 			a {
-				padding: 1.5em 1em;
+				background-color: inherit;
+				margin-bottom: 0;
+				padding: 1em;
 
 				.icon {
 					display: initial;

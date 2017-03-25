@@ -89,20 +89,18 @@ select {
 --------------------------------------------------------------*/
 .search-form {
 	position: relative;
+
 	input[type="search"] {
 		border-radius: 0;
 	}
-}
 
-.search-form .search-submit {
-	border-radius: 0;
-	bottom: 0;
-	padding: 0.5em .75em;
-	position: absolute;
-	right: 0;
-	top: 0;
-}
-
-.search-form .search-submit .icon {
-	vertical-align: top;
+	.search-submit {
+		border-radius: 0;
+		bottom: 0;
+		padding: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 37px;
+	}
 }

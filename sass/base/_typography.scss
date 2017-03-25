@@ -7,35 +7,16 @@
 	}
 }
 
-.wf-oswald-n4-active,
 .wf-active {
-	h1, h2, h3, h4, h5, h6 {
-		font-family: 'Oswald', $base-font-family;
+	h1, h2, h3, h4, h5, h6, p, span, li, td, .button, input {
 		opacity: 1;
 		transition: opacity $base-duration;
-	}
-}
-.wf-opensans-n4-active,
-.wf-active {
-	p, span, li, td, .button, input {
-		opacity: 1;
-		transition: opacity $base-duration;
-	}
-	body {
-		font-family: 'Open Sans', $base-font-family;
 	}
 }
 
-.wf-active,
 .wf-inactive {
 	h1, h2, h3, h4, h5, h6, p, span, li, td, .button, input {
 		opacity: 1;
-	}
-	h1, h2, h3, h4, h5, h6 {
-		font-family: 'Oswald', $base-font-family;
-	}
-	body {
-		font-family: 'Open Sans', $base-font-family;
 	}
 }
 
@@ -167,4 +148,8 @@ pre {
 	max-width: 100%;
 	overflow: auto;
 	padding: 1.6em;
+}
+
+.larger {
+	font-size: 1.125em;
 }

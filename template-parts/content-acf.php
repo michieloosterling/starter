@@ -32,7 +32,7 @@ if( class_exists( 'acf' ) ) {
 		echo '<div class="row ' . $row_class . ' ' . $options . '" data-stretch-type="' . $row_layout . '"' . $background .' id="row-'.$i.'">';
 		echo '<div class="cols ' . $column_type . '">';
 
-		if ( get_sub_field( 'column_type' ) == 'cols_1' ) {
+		if ( get_sub_field( 'column_type' ) == 'cols-1' ) {
 			echo '<div class="col">' . get_sub_field( 'col_1' ) . '</div>';
 		} elseif ( get_sub_field( 'column_type' ) == 'cols-1-small' ) {
 			echo '<div class="col">' . get_sub_field( 'col_1' ) . '</div>';

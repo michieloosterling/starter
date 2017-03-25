@@ -26,7 +26,7 @@
 		),
 		'menu_order' => 0,
 		'position' => 'acf_after_title',
-// 		'style' => 'seamless',
+		'style' => 'seamless',
 	));
 
 

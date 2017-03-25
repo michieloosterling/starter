@@ -1,74 +1,8 @@
 html .mceContentBody {
-	max-width: 700px;
+	max-width: 720px;
+	color: #333333;
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
-
-/* Lists */
-ul,
-ol {
-  margin: 1.5em 0 1.5em 1.5em;
-  padding: 0; }
-
-ul {
-  list-style: disc; }
-
-ol {
-  list-style: decimal; }
-
-li > ul,
-li > ol {
-  margin-top: 0;
-  margin-bottom: 0; }
-
-.entry-content li {
-  margin-top: .25em;
-  margin-bottom: .25em; }
-.entry-content li > ul,
-.entry-content li > ol {
-  margin-top: .25em;
-  margin-bottom: .25em; }
-
-dl {
-  margin: 1.5em 0; }
-
-dt {
-  font-weight: 600;
-  margin: 0; }
-
-dd {
-  margin-left: 2em; }
-
-/* tables */
-table {
-  border-collapse: collapse;
-  margin: 1em 0 2em;
-  table-layout: auto;
-  width: 100%; }
-
-th {
-  border-bottom: 1px solid #999999;
-  font-weight: 600;
-  padding: 0.5em 0;
-  text-align: left; }
-
-td {
-  border-bottom: 1px solid #cccccc;
-  padding: 0.5em 0; }
-
-tr,
-td,
-th {
-  vertical-align: top; }
-
-/* Typography */
-body {
-  color: #1a1a1a;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  font-size: 1em;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -ms-word-wrap: break-word;
-  word-wrap: break-word; }
 
 h1,
 h2,
@@ -76,70 +10,123 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  font-weight: 600;
-  line-height: 1.2; }
+  font-family: "Oswald", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  line-height: 1.2;
+  font-weight: 400;
+  padding: 1em 0 0;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  padding-top: 0;
+}
 
 h1 {
   font-size: 2em;
-  font-weight: 400;
-  margin: .67em 0; }
+  margin: 0 0 .67em;
+}
 
 h2 {
   font-size: 1.5em;
-  margin: 0.83em 0;
-  font-weight: 500; }
+  margin: 0 0 0.83em;
+}
 
 h3 {
   font-size: 1.17em;
-  margin: 1em 0; }
+  margin: 0 0 1em;
+}
 
 h4 {
   font-size: 1em;
-  margin: 1.33em 0; }
+  margin: 0 0 1.33em;
+}
 
 h5 {
   font-size: .83em;
-  margin: 1.67em 0; }
+  margin: 0 0 1.67em;
+}
 
 h6 {
   font-size: .67em;
-  margin: 2.33em 0; }
+  margin: 0 0 2.33em;
+}
 
 p {
-  margin: 1em 0; }
-
-@media screen and (min-width: 1660px) {
-  body {
-    font-size: 1.063em; } }
+  margin: 0 0 1.5em;
+}
 
 a {
   color: #1268a1;
   text-decoration: none;
-  transition: color 150ms ease; }
-  a:active, a:focus, a:hover {
-    color: #5995bd; }
+  -webkit-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+
+a:active, a:focus, a:hover {
+  color: #0d4e78;
+}
+
+:focus {
+  outline: #88b3d0 dotted 1px;
+}
+
+label {
+  font-weight: 600;
+}
 
 hr {
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #e6e5e5;
   border-left: 0;
   border-right: 0;
   border-top: 0;
-  margin: 1.5em 0; }
+  margin: 1.5em 0;
+}
 
 blockquote {
-  background: #f2f2f2;
-  margin: 2em 0;
-  padding: 1em 1.5em;
-  padding-left: 4.5em;
+  background: #f7f7f7;
+  margin: 1.5em 0;
+  padding: 1.5em;
   position: relative;
-  quotes: "“" "”" "“" "’"; }
+  quotes: "“" "”" "“" "’";
+}
 
-blockquote:before {
-  color: #1268a1;
-  content: open-quote;
-  font-size: 4em;
-  position: absolute;
-  top: 0;
-  left: 1.5rem; }
+blockquote p {
+  margin-bottom: .5em;
+}
 
+@media only screen and (min-width: 768px) {
+  blockquote {
+    padding-left: 4.5em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  blockquote:before {
+    color: #1268a1;
+    content: open-quote;
+    font-size: 4em;
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+  }
+}
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+.larger {
+  font-size: 1.125em;
+}
