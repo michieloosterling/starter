@@ -39,7 +39,7 @@ body {
 #masthead > header,
 .content-area:not(.wide),
 .content-area.wide .entry-content,
-#comments,
+body.page #comments,
 #colophon .widget-area {
 	@extend .padding;
 	@extend .wrap;

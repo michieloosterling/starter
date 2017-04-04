@@ -35,6 +35,7 @@ textarea {
 	border-radius: $base-border-radius;
 	box-shadow: $form-box-shadow;
 	box-sizing: border-box;
+	color: $base-font-color;
 	margin-bottom: $small-spacing;
 	padding: $base-spacing / 3;
 	transition: border-color $base-duration $base-timing;

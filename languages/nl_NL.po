@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Starter\n"
-"POT-Creation-Date: 2017-02-19 14:57+0100\n"
-"PO-Revision-Date: 2017-02-19 14:57+0100\n"
+"POT-Creation-Date: 2017-03-29 22:19+0200\n"
+"PO-Revision-Date: 2017-03-29 22:21+0200\n"
 "Last-Translator: Bas Middelham <bas@middelham.nl>\n"
 "Language-Team: Bas Middelham <bas@middelham.nl>\n"
 "Language: nl_NL\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.0\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -25,21 +25,10 @@ msgid "Oops! That page can&rsquo;t be found."
 msgstr "Oeps! Deze pagina kan niet worden gevonden."
 
 #: 404.php:21
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
-"Het lijkt erop dat niets werd gevonden op deze locatie. U kunt gebruik maken "
-"van het zoekformulier of het menu."
-
-#: 404.php:33
-msgid "Most Used Categories"
-msgstr "Meest gebruikte categorieën"
-
-#: 404.php:51
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "Kijk eens in de maandelijkse archieven %1$s"
+"Het lijkt erop dat niets op deze locatie werd gevonden. Teruggaan of "
+"misschien een zoekopdracht proberen?"
 
 #: comments.php:31
 #, php-format
@@ -63,9 +52,9 @@ msgstr "Nieuwere reacties"
 
 #: comments.php:78
 msgid "Comments are closed."
-msgstr "Reacties zijn gesloten"
+msgstr "Reacties zijn gesloten."
 
-#: footer.php:34
+#: footer.php:19
 #, php-format
 msgid "Website by %1$s."
 msgstr "Website door %1$s."
@@ -74,43 +63,59 @@ msgstr "Website door %1$s."
 msgid "Primary"
 msgstr "Hoofdmenu"
 
-#: functions.php:46
+#: functions.php:50
+msgid "Standard Small"
+msgstr "Standard Small"
+
+#: functions.php:51
+msgid "Standard Medium"
+msgstr "Standard Medium"
+
+#: functions.php:52
+msgid "Standard Large"
+msgstr "Standard Large"
+
+#: functions.php:53
+msgid "Wide Small"
+msgstr "Wide Small"
+
+#: functions.php:54
+msgid "Wide Medium"
+msgstr "Wide Medium"
+
+#: functions.php:55
+msgid "Wide Large"
+msgstr "Wide Large"
+
+#: functions.php:75
 msgid "Page Sidebar"
 msgstr "Pagina Sidebar"
 
-#: functions.php:52
+#: functions.php:81
 msgid "Blog Sidebar"
 msgstr "Blog Sidebar"
 
-#: functions.php:58
+#: functions.php:87
 msgid "Footer 1"
 msgstr "Footer 1"
 
-#: functions.php:64
+#: functions.php:93
 msgid "Footer 2"
 msgstr "Footer 2"
 
-#: functions.php:70
+#: functions.php:99
 msgid "Footer 3"
 msgstr "Footer 3"
 
-#: functions.php:151
-msgid "Post Header"
-msgstr "Bericht Header"
-
-#: functions.php:152
-msgid "Post Header Large"
-msgstr "Grote Bericht Header"
-
-#: functions.php:172
+#: functions.php:270
 msgid "Read More"
 msgstr "Lees verder"
 
-#: header.php:24
+#: header.php:17
 msgid "Skip to content"
 msgstr "Ga door naar inhoud"
 
-#: header.php:49
+#: header.php:26
 msgid "Menu"
 msgstr "Menu"
 
@@ -220,7 +225,7 @@ msgctxt "submit button"
 msgid "Search"
 msgstr "Zoek"
 
-#: template-parts/content-none.php:14
+#: template-parts/content-none.php:15
 msgid "Nothing Found"
 msgstr "Niets gevonden"
 
@@ -247,11 +252,11 @@ msgstr ""
 "Het lijkt erop dat we niet kunnen vinden wat je zoekt. Misschien biedt dat "
 "de zoekfunctie uitkomst."
 
-#: template-parts/content-page.php:30 template-parts/content.php:47
+#: template-parts/content-page.php:16 template-parts/content.php:36
 msgid "Pages:"
 msgstr "Pagina's:"
 
-#: template-parts/content.php:42
+#: template-parts/content.php:31
 #, php-format
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Verder lezen %s <span class=\"meta-nav\">&rarr;</span>"
@@ -262,7 +267,7 @@ msgstr "Starter"
 
 #. Theme URI of the plugin/theme
 msgid "http://strt.middelham.nl/"
-msgstr "http://strt.middelham.nl"
+msgstr "http://strt.middelham.nl/"
 
 #. Description of the plugin/theme
 msgid "A Starter Theme for WordPress based on Bourbon, Neat & Bitters."
@@ -275,3 +280,12 @@ msgstr "Bas Middelham"
 #. Author URI of the plugin/theme
 msgid "http://middelham.nl"
 msgstr "http://middelham.nl"
+
+#~ msgid "Most Used Categories"
+#~ msgstr "Meest gebruikte categorieën"
+
+#~ msgid "Try looking in the monthly archives. %1$s"
+#~ msgstr "Kijk eens in de maandelijkse archieven %1$s"
+
+#~ msgid "Post Header"
+#~ msgstr "Bericht Header"
