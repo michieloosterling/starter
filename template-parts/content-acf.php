@@ -13,6 +13,7 @@ if( class_exists( 'acf' ) ) {
 		$row_layout = get_sub_field( 'row_layout' );
 		$row_options = get_sub_field( 'row_options' );
 		$column_type = get_sub_field( 'column_type' );
+		$row_id = get_sub_field( 'row_id' );
 
 		if ( $row_options ) {
 			$options = implode(' ', $row_options);
@@ -29,7 +30,7 @@ if( class_exists( 'acf' ) ) {
 			$background = '';
 		}
 
-		echo '<div class="row ' . $row_class . ' ' . $options . '" data-stretch-type="' . $row_layout . '"' . $background .' id="row-'.$i.'">';
+		echo '<div class="row ' . $row_class . ' ' . $options . '" data-stretch-type="' . $row_layout . '"' . $background .' id="'.$row_id.'">';
 		echo '<div class="cols ' . $column_type . '">';
 
 		if ( get_sub_field( 'column_type' ) == 'cols-1' ) {
