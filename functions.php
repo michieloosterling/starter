@@ -3,39 +3,32 @@
 # Theme setup
 --------------------------------------------------------------*/
 if ( ! function_exists( 'strt_setup' ) ) :
-function strt_setup() {
-	load_theme_textdomain( 'strt', get_template_directory() . '/languages' );
-	add_theme_support( 'automatic-feed-links' );
-	add_theme_support( 'title-tag' );
-	add_theme_support( 'post-thumbnails' );
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'strt' ),
-	) );
-	add_theme_support( 'post-formats', array(
-		'gallery',
-		'image',
-		'video',
-	) );
-	add_theme_support( 'html5', array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	) );
-	add_image_size( 'standard_small', 560, 373, true );
-	add_image_size( 'standard_medium', 1160, 774, true ); 
-	add_image_size( 'standard_large', 2320, 1547, true ); 
-	
-	add_image_size( 'wide_small', 560, 315, true );
-	add_image_size( 'wide_medium', 1160, 652, true ); 
-	add_image_size( 'wide_large', 2320, 1305, true ); 
-	
-	add_image_size( 'ultrawide_small', 560, 240, true );
-	add_image_size( 'ultrawide_medium', 1160, 497, true ); 
-	add_image_size( 'ultrawide_large', 2320, 994, true ); 
-}
-endif;
+	function strt_setup() {
+		load_theme_textdomain( 'strt', get_template_directory() . '/languages' );
+		add_theme_support( 'automatic-feed-links' );
+		add_theme_support( 'title-tag' );
+		add_theme_support( 'post-thumbnails' );
+		register_nav_menus( array(
+			'primary' => esc_html__( 'Primary', 'strt' ),
+		) );
+		add_theme_support( 'html5', array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		) );
+		add_image_size( 'default_small', 560, 560 );
+		add_image_size( 'default_medium', 1160, 1160 ); 
+		add_image_size( 'default_large', 2320, 2320 ); 
+		add_image_size( 'wide_small', 560, 315, true );
+		add_image_size( 'wide_medium', 1160, 652, true ); 
+		add_image_size( 'wide_large', 2320, 1305, true ); 
+		add_image_size( 'ultrawide_small', 560, 240, true );
+		add_image_size( 'ultrawide_medium', 1160, 497, true ); 
+		add_image_size( 'ultrawide_large', 2320, 994, true ); 
+	}
+	endif;
 add_action( 'after_setup_theme', 'strt_setup' );
 
 
@@ -47,12 +40,15 @@ function strt_sizes( $sizes ) {
 	unset( $sizes['medium']);
 	unset( $sizes['large']);
 	return array_merge( $sizes, array(
-		'standard_small' => __( 'Standard Small' , 'strt' ),
-		'standard_medium' => __( 'Standard Medium' , 'strt' ),
-		'standard_large' => __( 'Standard Large' , 'strt' ),
+		'default_small' => __( 'Default Small', 'strt' ),
+		'default_medium' => __( 'Default Medium', 'strt' ),
+		'default_large' => __( 'Default Large', 'strt' ),
 		'wide_small' => __( 'Wide Small' , 'strt' ),
 		'wide_medium' => __( 'Wide Medium' , 'strt' ),
 		'wide_large' => __( 'Wide Large' , 'strt' ),
+		'ultrawide_small' => __( 'Ultra Wide Small' , 'strt' ),
+		'ultrawide_medium' => __( 'Ultra Wide Medium' , 'strt' ),
+		'ultrawide_large' => __( 'Ultra Wide Large' , 'strt' ),
 	));
 }
 add_filter( 'image_size_names_choose', 'strt_sizes' );
