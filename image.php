@@ -16,6 +16,8 @@ get_header(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			
+				<div class="entry-content">
+
 				<?php if( ! class_exists( 'acf' ) || ! get_field('hide_title') ) { ?>
 					<header class="entry-header">
 						<?php 
@@ -24,17 +26,15 @@ get_header(); ?>
 								echo '<p class="entry-subtitle">' . get_field( 'subheading' ) . '</p>';
 							}
 						?>
-				        <div class="entry-meta">
-					        <?php strt_posted_on(); ?>
-				            <?php _e('Featured in: ', 'strt'); ?><span class="parent-post-link"><a href="<?php echo get_permalink( $post->post_parent ); ?>" rel="gallery"><?php echo get_the_title( $post->post_parent ); ?></a></span>.
-				            <?php _e('Full size image: ', 'strt'); ?><span class="full-size-link"><a href="<?php echo wp_get_attachment_url(); ?>"><?php echo $metadata['width']; ?> &times; <?php echo $metadata['height']; ?></a></span>.
-				            <?php edit_post_link( __( 'Edit', 'strt' ), '<span class="edit-link">', '</span>.' ); ?>
-				        </div><!-- .entry-meta -->
+		        <div class="entry-meta">
+			        <?php strt_posted_on(); ?>
+		            <?php _e('Featured in: ', 'strt'); ?><span class="parent-post-link"><a href="<?php echo get_permalink( $post->post_parent ); ?>" rel="gallery"><?php echo get_the_title( $post->post_parent ); ?></a></span>.
+		            <?php _e('Full size image: ', 'strt'); ?><span class="full-size-link"><a href="<?php echo wp_get_attachment_url(); ?>"><?php echo $metadata['width']; ?> &times; <?php echo $metadata['height']; ?></a></span>.
+		            <?php edit_post_link( __( 'Edit', 'strt' ), '<span class="edit-link">', '</span>.' ); ?>
+		        </div><!-- .entry-meta -->
 					</header><!-- .entry-header -->
 				<?php } ?>
 			
-				<div class="entry-content">
-
 			        <div class="entry-attachment">
 			            <figure class="image-attachment">
 			                <?php strt_the_attached_image(); ?>
