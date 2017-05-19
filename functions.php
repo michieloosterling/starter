@@ -1,7 +1,5 @@
 <?php
 
-// Whatevah!!!
-
 /*--------------------------------------------------------------
 # Theme setup
 --------------------------------------------------------------*/
@@ -36,20 +34,18 @@ add_action( 'after_setup_theme', 'strt_setup' );
 
 
 /*--------------------------------------------------------------
-# Enables HSTS for security purposes (SSL security)
-# MAKE SURE YOU HAVE AN ACTIVE AND VALID SSL CERTIFICATE
-# Added by Michiel Oosterling 19/05/2017
+# Enables HSTS for security purposes - MAKE SURE YOU HAVE AN ACTIVE AND VALID SSL CERTIFICATE!
+# HSTS = HTTP Strict Transport Security
+# See https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security
+# @ by Michiel Oosterling - 19/05/2017
+
+# uncomment lines below to enable
 --------------------------------------------------------------*/
-add_action( 'send_headers', 'tgm_io_strict_transport_security' );
-/**
- * Enables the HTTP Strict Transport Security (HSTS) header.
- * @since 1.0.0
- */
-function tgm_io_strict_transport_security() {
- 
-    header( 'Strict-Transport-Security: max-age=10886400' );
- 
-}
+#add_action( 'send_headers', 'tgm_io_strict_transport_security' );
+#function tgm_io_strict_transport_security() {
+#  header( 'Strict-Transport-Security: max-age=10886400' );
+#}
+
 
 /*--------------------------------------------------------------
 # Make custom image sizes selectable in Admin
