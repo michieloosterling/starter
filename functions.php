@@ -35,7 +35,7 @@ add_action( 'after_setup_theme', 'strt_setup' );
 /*--------------------------------------------------------------
 # Enables HSTS for security purposes (SSL security)
 # MAKE SURE YOU HAVE AN ACTIVE AND VALID SSL CERTIFICATE
-# Added by Michiel 19/05/2017
+# Added by Michiel Oosterling 19/05/2017
 --------------------------------------------------------------*/
 add_action( 'send_headers', 'tgm_io_strict_transport_security' );
 /**
